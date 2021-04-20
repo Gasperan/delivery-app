@@ -1,0 +1,37 @@
+{
+  "name": "geo-service",
+  "version": "1.0.0",
+  "description": "microservice created to handle request about geo specifications",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build": "npm run clean && babel ./ --out-dir dist/ --ignore ./node_modules,**/__tests__/*,**/integration-test/*",
+    "test:unit": "jest --config jest.config.js --collectCoverage",
+    "test:dev": "jest --config jest.config.js --watch",
+    "start": "nodemon --exec babel-node src/server.js",
+    "knex": "node ./node_modules/.bin/knex",
+    "migrate:make": "npm run knex -- migrate:make --knexfile ./src/configuration/databaseConfiguration.js",
+    "migrate": "npm run knex -- migrate:latest --knexfile ./src/configuration/databaseConfiguration.js",
+    "rollback": "npm run knex -- migrate:rollback --knexfile ./src/configuration/databaseConfiguration.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.21.1",
+    "dotenv": "8.2.0",
+    "fastify": "3.14.2",
+    "fastify-cors": "^5.2.0",
+    "knex": "0.95.4",
+    "rimraf": "^3.0.2",
+    "sqlite3": "5.0.2",
+    "uuidv4": "6.2.7",
+    "@babel/cli": "7.13.14",
+    "@babel/core": "7.13.15",
+    "@babel/node": "7.13.13",
+    "@babel/preset-env": "7.13.15"
+  },
+  "devDependencies": {
+    "jest": "26.6.3",
+    "nodemon": "2.0.7"
+  }
+}

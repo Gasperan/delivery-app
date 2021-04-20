@@ -1,0 +1,12 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "gasparzinho123/delivery-app:latest"
+  },
+  "Ports": [
+    {
+      "ContainerPort": 3001,
+      "HostPort": 3001
+    }
+  ]
+}

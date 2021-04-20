@@ -1,0 +1,9 @@
+fileignoreconfig:
+- filename: backend/geo-service/package-lock.json
+  checksum: fd4436b960ed341a6815093a0a5cad7394f2d36e3ee5a2ffc72e03150f975fb1
+- filename: frontend/delivery/package-lock.json
+  checksum: 5ec4b6fb9ef6a6d76381ddcf64613ca9e4c7e755a03692a61a3a5ec432610529
+- filename: frontend/delivery/src/pages/SearchHistoryView.js
+  checksum: 202303c8eadc51a43ca5d062a7ed4e550e450b6afc968c7a43c0a023b1e65279
+- filename: backend/geo-service/src/gateways/__tests__/getCoordinatesFromAddressGateway.test.js
+  checksum: 9352ff9b7c5b03b92c6c1bb6575a0940f22f4ee2bbad288de4a7a35bad0938c8
